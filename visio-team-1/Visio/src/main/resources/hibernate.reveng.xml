@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="visio_db"/>
+  <table-filter match-name="vit"/>
+  <table-filter match-name="route"/>
+  <table-filter match-name="beacondata"/>
+  <table-filter match-name="beacongroup"/>
+  <table-filter match-name="route_externaluser"/>
+  <table-filter match-name="waypoints"/>
+  <table-filter match-name="datatype"/>
+  <table-filter match-name="externaluser"/>
+  <table-filter match-name="beacon"/>
+  <table-filter match-name="user"/>
+</hibernate-reverse-engineering>

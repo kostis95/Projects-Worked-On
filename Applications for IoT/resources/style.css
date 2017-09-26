@@ -1,0 +1,100 @@
+body {
+	background-image: url("Silkroad.jpg"); 
+	background-size: cover;
+	font:12px/18px Arial, verdana, sans-serif;
+	align-content: center;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+container {
+    margin: 0px auto;
+    width: 800px;
+    height: 600px;
+    border: 10px #333 solid;
+}
+
+#videoElement {
+    width: 800px;
+    height: 600px;
+    background-color: #666;
+}
+
+#buttons{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	margin-right: 5px;
+	left: 50%;
+	transform: translate( -50%);
+}
+
+#map{
+	margin: 0 auto;
+	border: solid 4px #a8a80c;
+	box-shadow: 4px 3px 8px #000000;
+}
+
+.row {
+	margin-right: 0;
+}
+
+#logoImagen{
+	height: 50px;
+	width: 50px;
+	margin-top: -15px;
+}
+
+
+#table{
+	background-color: white;
+	border: solid 2px black;
+	text-align: center;
+}
+
+#extTable{
+	margin: 0 auto;
+	border-collapse: separate;
+	border: solid 4px #a8a80c;
+	box-shadow: 4px 3px 8px #000000;
+}
+
+
+.btn {
+  background: #f5f55d;
+  background-image: -webkit-linear-gradient(top, #ffffff, #a8a80c);
+  background-image: -moz-linear-gradient(top, #ffffff, #a8a80c);
+  background-image: -ms-linear-gradient(top, #ffffff, #a8a80c);
+  background-image: -o-linear-gradient(top, #ffffff, #a8a80c);
+  background-image: linear-gradient(to bottom, #f75a42, #a8a80c);
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+  -webkit-box-shadow: 4px 3px 8px #000000;
+  -moz-box-shadow: 4px 3px 8px #000000;
+  box-shadow: 4px 3px 8px #000000;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 13px;
+  border: solid #ffffff 3px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background: #a8a80c;
+  background-image: -webkit-linear-gradient(top, #a8a80c, #f75a42);
+  background-image: -moz-linear-gradient(top, #a8a80c, #f75a42);
+  background-image: -ms-linear-gradient(top, #a8a80c, #f75a42);
+  background-image: -o-linear-gradient(top, #a8a80c, #f75a42);
+  background-image: linear-gradient(to bottom, #a8a80c, #f75a42);
+  -webkit-box-shadow: 4px 3px 8px #000000;
+  -moz-box-shadow: 4px 3px 8px #000000;
+  color: white;
+}
+
+

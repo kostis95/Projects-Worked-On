@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Map</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<!--Is used to call the standar navigation bar defined in navigation.html-->
+<div id="nav-placeholder"></div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("navigation.html");
+});
+</script>
+
+</head> <br>
+
+<div class="row">
+	<div id="buttons">
+		<button class="btn" onclick="getLocation()">Display my coordinates</button> 
+		<button class="btn" onclick="storeLocation()">Add my location</button> 
+	</div>
+</div> <br><br><br>
+
+<div class="row">
+	<div id="txtHint"></div>
+</div> <br>
+
+<div class="row">
+	<div style="height: 600px; width: 85%;" id="map">
+		<script>
+			function initMap() {
+				document.onload = retrieveLocations("");
+			}
+		</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGS-cpFn-wyFOuwUneQkpXfYSndvllYw4&callback=initMap">
+		</script>
+	</div>
+</div> <br>
+	
+	<p id="demo"></p>
+	<p id="sampleDiv"></p>
+	
+	<script>
+	var x = document.getElementById("demo");
+	var z = document.getElementById("sampleDiv");
+	var y;
+	
+		//GETS YOUR LOCATION
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+	
+		//RETRIEVE ALL LOCATION
+	function getLocations(){
+	  var locations;
+	  //  var url="./AOF_Select_Locations.php";
+	  var oReq = new XMLHttpRequest();
+	  // if ./select_locations.php is loaded successfully
+	  //  this method will be called
+	  oReq.onreadystatechange = function(){
+	  if (oReq.readyState == 4 && oReq.status == 200){
+		//dit hoort de map te zijn die in googleapi.php gemaakt is
+			mapWithLocations = oReq.responseText;
+			x.getElementById("mapWithLocations");
+		  }
+	  }
+	oReq.open("get", 'http://localhost/Applications%20for%20IoT/GoogleApi.php', true);
+	oReq.send();
+	}
+	
+	
+		function showPosition(position) {
+		y = position.coords;
+		// x.innerHTML = "<img src='"+img_url+"'>";
+		x.innerHTML = "Latitude: " + y.latitude +
+		"<br>Longitude: " + y.longitude;
+
+	}	
+	
+		//SENDLOCATION FOR INSERT
+	function storeLocation(){
+		var oReq = new XMLHttpRequest();
+		oReq.onreadystatechange = function(){
+		if (oReq.readyState == 4 && oReq.status == 200){
+		  var result = oReq.responseText;
+		  //to test the result
+		  <!-- z.innerHTML = result; -->
+			}
+		}
+		oReq.open("GET", 'http://localhost/Applications%20for%20IoT/resources/Insert_Location.php?'
+		+ "lat=" + y.latitude + "&lon=" + y.longitude);
+		oReq.send();
+	}
+		
+
+	//attributes
+	var locations;            
+	var htmlElement = document.getElementById("locations");
+	var map;
+	var markers = [];
+	var marker;
+	
+	function retrieveLocations(longitudd, latitudd, booleano) {
+		if(!booleano){
+			map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center:  new google.maps.LatLng(44.3829594 , 4.84615)});
+			marker = new google.maps.Marker({position: new google.maps.LatLng(latitudd, longitudd),map: map});
+			marker.setMap(map);
+			markers.push(marker);
+		}
+		else{
+			marker = new google.maps.Marker({position: new google.maps.LatLng(latitudd,longitudd),map: map});
+			marker.setMap(map);
+			markers.push(marker);
+		}
+	}
+	
+
+	// Deletes markers still to implement
+	function deleteMarkers() {
+		var i;
+		var marker;
+		for(i=0; i<markers.length; i++){
+			marker = markers[i];
+			marker.setMap(null);
+			document.getElementById("txtHint").innerHTML = "";
+		}
+	}
+</script>
+</body>
+</html>
