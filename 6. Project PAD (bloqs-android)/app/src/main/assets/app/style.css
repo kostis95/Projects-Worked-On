@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+}
+#currentTick {
+  position: fixed;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  font-size: 12px;
+  background: yellow;
+}
+#currentTick::before {
+  content: 'Tick: ';
+}
+.grid {
+  overflow: static;
+}
+.grid-row {
+  overflow: visible;
+  white-space: nowrap;
+}
+.grid-item {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px #d3d3d3;
+}
+.block {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform-origin: center center;
+}
+.block img {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-inline: 1123;
+}
+.block.Button.powered .top,
+.block.wire.powered .top,
+.block.Button.powered .right,
+.block.wire.powered .right,
+.block.Button.powered .bottom,
+.block.wire.powered .bottom,
+.block.Button.powered .left,
+.block.wire.powered .left {
+  background: yellow;
+}
+.block.and .gate {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  top: 20%;
+  left: 15%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: aqua;
+}
+.block.logic {
+  overflow: hidden;
+}
+.block.cross .left {
+  width: 37% !important;
+}
+.block.cross .right {
+  width: 37% !important;
+  left: 63% !important;
+}
+.block .top {
+  position: absolute;
+  width: 10%;
+  left: 45%;
+  height: 55%;
+  background: aqua;
+}
+.block .top.powered {
+  background: yellow;
+}
+.block .right {
+  position: absolute;
+  height: 10%;
+  left: 45%;
+  width: 55%;
+  top: 45%;
+  background: aqua;
+}
+.block .right.powered {
+  background: yellow;
+}
+.block .bottom {
+  position: absolute;
+  height: 55%;
+  left: 45%;
+  top: 45%;
+  width: 10%;
+  background: aqua;
+}
+.block .bottom.powered {
+  background: yellow;
+}
+.block .left {
+  position: absolute;
+  height: 10%;
+  top: 45%;
+  width: 55%;
+  background: aqua;
+}
+.block .left.powered {
+  background: yellow;
+}
+.block[data-orientation='top'] img {
+  transform: rotate(-90deg);
+}
+.block[data-orientation='right'] img {
+  transform: rotate(0deg);
+}
+.block[data-orientation='bottom'] img {
+  transform: rotate(90deg);
+}
+.block[data-orientation='left'] img {
+  transform: rotate(180deg);
+}

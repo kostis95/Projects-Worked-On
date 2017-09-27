@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/power"
+        android:icon="@drawable/ic_flash_on_black_48dp"
+        android:title="Power"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/rotateLeft"
+        android:icon="@drawable/ic_rotate_left_black_48dp"
+        android:title="Rotate Left" />
+
+    <item
+        android:id="@+id/rotateRight"
+        android:icon="@drawable/ic_rotate_right_black_48dp"
+        android:title="Rotate Right" />
+
+    <item
+        android:id="@+id/remove"
+        android:icon="@drawable/ic_remove_black_48dp"
+        android:title="Remove" />
+
+</menu>

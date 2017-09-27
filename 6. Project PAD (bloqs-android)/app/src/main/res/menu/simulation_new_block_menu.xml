@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/wire"
+            android:icon="@drawable/gate_wire"
+            android:title="Wire" />
+'
+        <item
+            android:id="@+id/cross"
+            android:icon="@drawable/gate_cross"
+            android:title="Cross Wire" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/button"
+            android:icon="@drawable/gate_button_on"
+            android:title="Button" />
+        <item
+            android:id="@+id/light"
+            android:icon="@drawable/gate_light_on"
+            android:title="Light" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/and"
+            android:icon="@drawable/gate_and"
+            android:title="And Gate" />
+
+        <item
+            android:id="@+id/not"
+            android:icon="@drawable/gate_not"
+            android:title="Not Gate" />
+
+        <item
+            android:id="@+id/or"
+            android:icon="@drawable/gate_or"
+            android:title="Or Gate" />
+
+        <item
+            android:id="@+id/xor"
+            android:icon="@drawable/gate_xor"
+            android:title="Xor Gate" />
+    </group>
+
+
+
+
+</menu>
