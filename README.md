@@ -31,3 +31,8 @@ It is an app for android in which the children can solve "block" puzzles and whe
 In this team project I helped and worked on creating an android application which can be used for home security. 
 The user would set up a desired amount of phones in the room to be monitored. As soon as motion is detected, pictures and videos
 are recorded after which the user is alerted.
+
+8. (Multi-Threading )Dijkstra -Team Thanos
+In this course I had to work on implementing multithreading for A shortest path algorithm.
+First for running the whole algorithm multiple times parallel and after just a certain part of the algorithm (Node parallelisation). This I did by adding multiple patterns such as producer-consumer and Threadpool.
+I also worked with Datastructures such as Concurrent Queue and Executorservice.
