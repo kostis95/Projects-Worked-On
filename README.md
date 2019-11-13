@@ -35,4 +35,4 @@ are recorded after which the user is alerted.
 8. (Multi-Threading )Dijkstra -Team Thanos
 In this course I had to work on implementing multithreading for A shortest path algorithm.
 First for running the whole algorithm multiple times parallel and after just a certain part of the algorithm (Node parallelisation). This I did by adding multiple patterns such as producer-consumer and Threadpool.
-I also worked with Datastructures such as Concurrent Queue and Executorservice.
+I also worked with Datastructures such as Concurrent Queue and Executorservice..
