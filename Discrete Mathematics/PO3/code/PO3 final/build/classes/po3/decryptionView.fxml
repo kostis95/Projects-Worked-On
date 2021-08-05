@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="522.0" prefWidth="885.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="po3.DecryptionViewController">
+  <children>
+    <Label layoutX="88.0" layoutY="53.0" text="Fill in the value for n and e" />
+    <TextField fx:id="nValue" layoutX="48.0" layoutY="103.0" prefWidth="81.0" />
+    <Button layoutX="129.0" layoutY="159.0" mnemonicParsing="false" onAction="#decryptStart" text="Step 1" />
+    <TextField id="step1" fx:id="step1outputD" layoutX="43.0" layoutY="223.0" prefWidth="248.0" />
+    <TextField id="step1" fx:id="step2outputD" layoutX="582.0" layoutY="223.0" prefWidth="248.0" />
+    <TextField id="nValue" fx:id="eValue" layoutX="210.0" layoutY="103.0" prefWidth="81.0" />
+    <Label layoutX="83.0" layoutY="79.0" text="n" />
+    <Label layoutX="245.0" layoutY="79.0" text="e" />
+    <TextField id="step1" fx:id="encryptedMessage" layoutX="584.0" layoutY="103.0" prefWidth="248.0" />
+    <Label layoutX="607.0" layoutY="74.0" text="enter encrypted message" />
+    <Label layoutX="141.0" layoutY="199.0" text="d value" />
+    <Label layoutX="628.0" layoutY="199.0" text="decrypted message" />
+    <Button layoutX="665.0" layoutY="159.0" mnemonicParsing="false" onAction="#decryptStart2" text="Step 2" />
+  </children>
+</AnchorPane>

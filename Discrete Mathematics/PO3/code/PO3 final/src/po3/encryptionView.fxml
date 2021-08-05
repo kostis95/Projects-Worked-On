@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.9999000000025" prefWidth="885.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="po3.EncryptionViewController">
+  <children>
+    <Label layoutX="91.0" layoutY="61.0" text="Fill in the value for n" />
+    <TextField fx:id="nValue" layoutX="48.0" layoutY="111.0" prefWidth="248.0" />
+    <Button layoutX="132.0" layoutY="167.0" mnemonicParsing="false" onAction="#encryptStart" text="Step 1" />
+    <Label layoutX="380.0" layoutY="318.0" text="Fill in the value for m" />
+    <TextField id="nValue" fx:id="mValue" layoutX="339.0" layoutY="355.0" prefWidth="248.0" />
+    <TextField fx:id="step1" layoutX="49.0" layoutY="231.0" prefWidth="248.0" />
+    <TextField id="step1" fx:id="step11" layoutX="49.0" layoutY="285.0" prefWidth="248.0" />
+    <TextField id="step1" fx:id="step2" layoutX="596.0" layoutY="231.0" prefWidth="248.0" />
+    <TextField id="step1" fx:id="step3" layoutX="114.0" layoutY="462.0" prefWidth="698.0" />
+    <Button layoutX="681.0" layoutY="177.0" mnemonicParsing="false" onAction="#encryptStart2" text="Step 2" />
+    <Button layoutX="423.0" layoutY="396.0" mnemonicParsing="false" onAction="#encryptStart3" text="Step 3" />
+    <Label layoutX="142.0" layoutY="207.0" text="p and q" />
+    <Label layoutX="122.0" layoutY="261.0" text="Milliseconds " />
+    <Label layoutX="716.0" layoutY="207.0" text="e" />
+    <Label layoutX="380.0" layoutY="438.0" text="Encrypted message" />
+  </children>
+</AnchorPane>
